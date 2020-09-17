@@ -1,4 +1,4 @@
-// Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 /*===========================================================================
 	Generated code exported from UnrealHeaderTool.
 	DO NOT modify this manually! Edit the corresponding .h files instead!
@@ -18,30 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 	UE4DUINO_API UClass* Z_Construct_UClass_USerial_NoRegister();
 	UE4DUINO_API UClass* Z_Construct_UClass_USerial();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_BytesToFloat();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_BytesToInt();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_Close();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_FloatToBytes();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_Flush();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_GetBaud();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_GetPort();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_IntToBytes();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_IsOpened();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_LineEndToStr();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_Open();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_OpenComPort();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_Print();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_Println();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_ReadByte();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_ReadBytes();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_ReadFloat();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_ReadInt();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_Readln();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_ReadString();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_WriteByte();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_WriteBytes();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_WriteFloat();
-	UE4DUINO_API UFunction* Z_Construct_UFunction_USerial_WriteInt();
 // End Cross Module References
 	static UEnum* ELineEnd_StaticEnum()
 	{
@@ -105,6 +81,196 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 		}
 		return ReturnEnum;
 	}
+	DEFINE_FUNCTION(USerial::execLineEndToStr)
+	{
+		P_GET_ENUM(ELineEnd,Z_Param_LineEnd);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->LineEndToStr(ELineEnd(Z_Param_LineEnd));
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execGetBaud)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=P_THIS->GetBaud();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execGetPort)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=P_THIS->GetPort();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execIsOpened)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsOpened();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execFlush)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Flush();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execWriteBytes)
+	{
+		P_GET_TARRAY(uint8,Z_Param_Buffer);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->WriteBytes(Z_Param_Buffer);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execWriteByte)
+	{
+		P_GET_PROPERTY(FByteProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->WriteByte(Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execWriteInt)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->WriteInt(Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execWriteFloat)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->WriteFloat(Z_Param_Value);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execPrintln)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_String);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->Println(Z_Param_String);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execPrint)
+	{
+		P_GET_PROPERTY(FStrProperty,Z_Param_String);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->Print(Z_Param_String);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execReadBytes)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Limit);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<uint8>*)Z_Param__Result=P_THIS->ReadBytes(Z_Param_Limit);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execReadByte)
+	{
+		P_GET_UBOOL_REF(Z_Param_Out_bSuccess);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(uint8*)Z_Param__Result=P_THIS->ReadByte(Z_Param_Out_bSuccess);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execReadInt)
+	{
+		P_GET_UBOOL_REF(Z_Param_Out_bSuccess);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=P_THIS->ReadInt(Z_Param_Out_bSuccess);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execReadFloat)
+	{
+		P_GET_UBOOL_REF(Z_Param_Out_bSuccess);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->ReadFloat(Z_Param_Out_bSuccess);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execReadln)
+	{
+		P_GET_UBOOL_REF(Z_Param_Out_bSuccess);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->Readln(Z_Param_Out_bSuccess);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execReadString)
+	{
+		P_GET_UBOOL_REF(Z_Param_Out_bSuccess);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FString*)Z_Param__Result=P_THIS->ReadString(Z_Param_Out_bSuccess);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execClose)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Close();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execOpen)
+	{
+		P_GET_PROPERTY(FIntProperty,Z_Param_Port);
+		P_GET_PROPERTY(FIntProperty,Z_Param_BaudRate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->Open(Z_Param_Port,Z_Param_BaudRate);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execFloatToBytes)
+	{
+		P_GET_PROPERTY_REF(FFloatProperty,Z_Param_Out_Float);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<uint8>*)Z_Param__Result=USerial::FloatToBytes(Z_Param_Out_Float);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execBytesToFloat)
+	{
+		P_GET_TARRAY(uint8,Z_Param_Bytes);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=USerial::BytesToFloat(Z_Param_Bytes);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execIntToBytes)
+	{
+		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_Int);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(TArray<uint8>*)Z_Param__Result=USerial::IntToBytes(Z_Param_Out_Int);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execBytesToInt)
+	{
+		P_GET_TARRAY(uint8,Z_Param_Bytes);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=USerial::BytesToInt(Z_Param_Bytes);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USerial::execOpenComPort)
+	{
+		P_GET_UBOOL_REF(Z_Param_Out_bOpened);
+		P_GET_PROPERTY(FIntProperty,Z_Param_Port);
+		P_GET_PROPERTY(FIntProperty,Z_Param_BaudRate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(USerial**)Z_Param__Result=USerial::OpenComPort(Z_Param_Out_bOpened,Z_Param_Port,Z_Param_BaudRate);
+		P_NATIVE_END;
+	}
 	void USerial::StaticRegisterNativesUSerial()
 	{
 		UClass* Class = USerial::StaticClass();
@@ -153,7 +319,7 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USerial_BytesToFloat_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventBytesToFloat_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_BytesToFloat_Statics::NewProp_Bytes = { "Bytes", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventBytesToFloat_Parms, Bytes), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_BytesToFloat_Statics::NewProp_Bytes = { "Bytes", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventBytesToFloat_Parms, Bytes), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USerial_BytesToFloat_Statics::NewProp_Bytes_Inner = { "Bytes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USerial_BytesToFloat_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USerial_BytesToFloat_Statics::NewProp_ReturnValue,
@@ -197,7 +363,7 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USerial_BytesToInt_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventBytesToInt_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_BytesToInt_Statics::NewProp_Bytes = { "Bytes", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventBytesToInt_Parms, Bytes), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_BytesToInt_Statics::NewProp_Bytes = { "Bytes", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventBytesToInt_Parms, Bytes), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USerial_BytesToInt_Statics::NewProp_Bytes_Inner = { "Bytes", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USerial_BytesToInt_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USerial_BytesToInt_Statics::NewProp_ReturnValue,
@@ -270,7 +436,7 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_FloatToBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventFloatToBytes_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_FloatToBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventFloatToBytes_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USerial_FloatToBytes_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USerial_FloatToBytes_Statics::NewProp_Float_MetaData[] = {
@@ -420,7 +586,7 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_IntToBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventIntToBytes_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_IntToBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventIntToBytes_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USerial_IntToBytes_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USerial_IntToBytes_Statics::NewProp_Int_MetaData[] = {
@@ -800,7 +966,7 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_ReadBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventReadBytes_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_ReadBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventReadBytes_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USerial_ReadBytes_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_USerial_ReadBytes_Statics::NewProp_Limit = { "Limit", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventReadBytes_Parms, Limit), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USerial_ReadBytes_Statics::PropPointers[] = {
@@ -1081,7 +1247,7 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 		((Serial_eventWriteBytes_Parms*)Obj)->ReturnValue = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_USerial_WriteBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(Serial_eventWriteBytes_Parms), &Z_Construct_UFunction_USerial_WriteBytes_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_WriteBytes_Statics::NewProp_Buffer = { "Buffer", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventWriteBytes_Parms, Buffer), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_USerial_WriteBytes_Statics::NewProp_Buffer = { "Buffer", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Serial_eventWriteBytes_Parms, Buffer), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_USerial_WriteBytes_Statics::NewProp_Buffer_Inner = { "Buffer", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USerial_WriteBytes_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USerial_WriteBytes_Statics::NewProp_ReturnValue,
@@ -1225,14 +1391,14 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_UE4Duino,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_USerial_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_USerial_BytesToFloat, "BytesToFloat" }, // 2085771564
-		{ &Z_Construct_UFunction_USerial_BytesToInt, "BytesToInt" }, // 2525814205
+		{ &Z_Construct_UFunction_USerial_BytesToFloat, "BytesToFloat" }, // 945856623
+		{ &Z_Construct_UFunction_USerial_BytesToInt, "BytesToInt" }, // 3484049074
 		{ &Z_Construct_UFunction_USerial_Close, "Close" }, // 3436734167
-		{ &Z_Construct_UFunction_USerial_FloatToBytes, "FloatToBytes" }, // 3863685592
+		{ &Z_Construct_UFunction_USerial_FloatToBytes, "FloatToBytes" }, // 77187870
 		{ &Z_Construct_UFunction_USerial_Flush, "Flush" }, // 4159348829
 		{ &Z_Construct_UFunction_USerial_GetBaud, "GetBaud" }, // 2818308664
 		{ &Z_Construct_UFunction_USerial_GetPort, "GetPort" }, // 2609609758
-		{ &Z_Construct_UFunction_USerial_IntToBytes, "IntToBytes" }, // 2211874035
+		{ &Z_Construct_UFunction_USerial_IntToBytes, "IntToBytes" }, // 3419960544
 		{ &Z_Construct_UFunction_USerial_IsOpened, "IsOpened" }, // 3591230975
 		{ &Z_Construct_UFunction_USerial_LineEndToStr, "LineEndToStr" }, // 3315941817
 		{ &Z_Construct_UFunction_USerial_Open, "Open" }, // 1773772079
@@ -1240,13 +1406,13 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 		{ &Z_Construct_UFunction_USerial_Print, "Print" }, // 3624550788
 		{ &Z_Construct_UFunction_USerial_Println, "Println" }, // 902271478
 		{ &Z_Construct_UFunction_USerial_ReadByte, "ReadByte" }, // 2852108593
-		{ &Z_Construct_UFunction_USerial_ReadBytes, "ReadBytes" }, // 3984274014
+		{ &Z_Construct_UFunction_USerial_ReadBytes, "ReadBytes" }, // 2088297352
 		{ &Z_Construct_UFunction_USerial_ReadFloat, "ReadFloat" }, // 957498449
 		{ &Z_Construct_UFunction_USerial_ReadInt, "ReadInt" }, // 459988499
 		{ &Z_Construct_UFunction_USerial_Readln, "Readln" }, // 2217210781
 		{ &Z_Construct_UFunction_USerial_ReadString, "ReadString" }, // 3055448538
 		{ &Z_Construct_UFunction_USerial_WriteByte, "WriteByte" }, // 1833209976
-		{ &Z_Construct_UFunction_USerial_WriteBytes, "WriteBytes" }, // 609951059
+		{ &Z_Construct_UFunction_USerial_WriteBytes, "WriteBytes" }, // 3444058018
 		{ &Z_Construct_UFunction_USerial_WriteFloat, "WriteFloat" }, // 1989386248
 		{ &Z_Construct_UFunction_USerial_WriteInt, "WriteInt" }, // 3215570694
 	};
@@ -1300,7 +1466,7 @@ void EmptyLinkFunctionForGeneratedCodeSerial() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USerial, 1248989997);
+	IMPLEMENT_CLASS(USerial, 1918826335);
 	template<> UE4DUINO_API UClass* StaticClass<USerial>()
 	{
 		return USerial::StaticClass();
